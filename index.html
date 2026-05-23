@@ -3,12 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rosenstiel Research Day 2027</title>
+  <title>Rosenstiel Research Day 2027 · University of Miami</title>
   <meta name="description" content="Rosenstiel Research Day 2027 — Friday, March 19, 2027. A school-wide celebration of research across Earth, Ocean, and Atmospheric Sciences at the Rosenstiel School, University of Miami." />
+  <meta name="theme-color" content="#0A2A47" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
 <body>
+
+  <div class="topbar">
+    <i class="fas fa-bullhorn"></i> &nbsp;<strong>Call for Abstracts opens Tue, Nov 3, 2026.</strong>
+    &nbsp;Submission = registration —
+    <a href="submit.html">learn how it works</a>.
+  </div>
+
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html">
@@ -28,37 +36,140 @@
   </header>
 
   <main>
+
+    <!-- HERO -->
     <section class="hero">
       <div class="container hero-inner">
         <p class="eyebrow"><i class="fas fa-star"></i> School-Wide Annual Event</p>
-        <h1>Rosenstiel Research Day 2027</h1>
-        <p class="tagline">Celebrating Discovery Across Earth, Ocean, and Atmospheric Sciences</p>
-        <p class="hero-meta">
-          <span><i class="fas fa-calendar-day" style="color:var(--warm-coral)"></i> <strong>Friday, March 19, 2027</strong></span>
-          <span aria-hidden="true">·</span>
-          <span><i class="fas fa-map-marker-alt" style="color:var(--warm-coral)"></i> Auditorium &amp; SALT</span>
-          <span aria-hidden="true">·</span>
-          <span><i class="fas fa-university" style="color:var(--warm-coral)"></i> Rosenstiel School, University of Miami</span>
-        </p>
+
+        <h1 class="hero-title hero-title--editorial" aria-label="Rosenstiel Research Day 2027">
+          <span class="ht-school">Rosenstiel</span>
+          <span class="ht-headline">
+            <span class="ht-event">Research Day</span><span class="ht-year">2027</span>
+          </span>
+          <span class="ht-rule" aria-hidden="true"></span>
+        </h1>
+
+        <p class="tagline">Celebrating discovery across Earth, Ocean, and Atmospheric Sciences.</p>
+
+        <div class="hero-meta">
+          <span class="hero-meta-item"><i class="fas fa-calendar-day"></i> <strong>Friday, March 19, 2027</strong></span>
+          <span class="hero-meta-item"><i class="fas fa-map-marker-alt"></i> Auditorium &amp; SALT</span>
+          <span class="hero-meta-item"><i class="fas fa-university"></i> Rosenstiel School, UM</span>
+        </div>
+
         <p class="lede">
-          A full day of oral talks, lightning talks, posters, awards, and a
-          social hour — showcasing research by students, postdocs, staff, and
-          faculty from across the Rosenstiel School.
+          A full day of oral talks, lightning talks, poster sessions, awards,
+          and a closing social hour — showcasing research from students,
+          postdocs, staff, and faculty across the entire Rosenstiel School.
         </p>
+
         <div class="cta-row">
           <a class="btn btn-primary" href="submit.html"><i class="fas fa-paper-plane"></i> Submit an Abstract</a>
-          <a class="btn btn-secondary" href="register.html"><i class="fas fa-user-plus"></i> Attend Only (No Abstract)</a>
+          <a class="btn btn-secondary" href="register.html"><i class="fas fa-user-plus"></i> Attend Only</a>
         </div>
+
         <p class="cta-note">
-          <i class="fas fa-info-circle"></i> Presenting? <strong>Submitting an abstract registers you automatically</strong> — no separate registration needed.
-          Not presenting? Use the audience-only sign-up so we can count you for lunch.
+          <i class="fas fa-info-circle"></i> Presenting?
+          <strong>Submitting an abstract registers you automatically</strong> —
+          no separate registration needed. Not presenting? Use the audience-only
+          sign-up so we can count you for lunch.
         </p>
+
+        <div class="countdown" id="countdown" aria-label="Time remaining until Research Day">
+          <span class="countdown-label"><i class="fas fa-hourglass-half"></i> &nbsp;Countdown to Research Day</span>
+          <div class="countdown-cell"><span class="countdown-num" id="cd-days">—</span><span class="countdown-unit">Days</span></div>
+          <div class="countdown-cell"><span class="countdown-num" id="cd-hours">—</span><span class="countdown-unit">Hours</span></div>
+          <div class="countdown-cell"><span class="countdown-num" id="cd-mins">—</span><span class="countdown-unit">Minutes</span></div>
+          <div class="countdown-cell"><span class="countdown-num" id="cd-secs">—</span><span class="countdown-unit">Seconds</span></div>
+        </div>
+      </div>
+
+      <div class="hero-waves" aria-hidden="true">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path class="wave-1" d="M0,60 C240,100 480,20 720,50 C960,80 1200,30 1440,60 L1440,120 L0,120 Z" />
+          <path class="wave-2" d="M0,80 C240,110 480,50 720,75 C960,100 1200,55 1440,85 L1440,120 L0,120 Z" />
+          <path class="wave-3" d="M0,105 C240,120 480,90 720,105 C960,120 1200,95 1440,110 L1440,120 L0,120 Z" />
+        </svg>
       </div>
     </section>
 
-    <section class="container section">
-      <h2><span class="section-icon" style="background:var(--warm-coral)"><i class="fas fa-info-circle"></i></span> About the Day</h2>
-      <p>
+    <!-- STATS STRIP -->
+    <div class="container">
+      <div class="stat-strip reveal">
+        <div class="stat">
+          <span class="stat-num">4</span>
+          <span class="stat-label">Oral Sessions</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">3</span>
+          <span class="stat-label">Lightning Sessions</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">2</span>
+          <span class="stat-label">Poster Sessions</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">5<span class="plus">+</span></span>
+          <span class="stat-label">Awards</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- DEAN'S BANNER -->
+    <section class="container section reveal" style="padding-top:2.5rem;">
+      <div class="dean-banner">
+        <div class="dean-seal" aria-hidden="true">
+          <i class="fas fa-university"></i>
+        </div>
+        <div class="dean-banner-body">
+          <p class="dean-banner-kicker">Supported by the Dean's Office</p>
+          <h2 class="dean-banner-title">A school-wide gathering, championed by leadership.</h2>
+          <p class="dean-banner-sub">
+            Research Day is supported by Dean Ben Kirtman and organized by Guoqing Lin,
+            Associate Dean of Research — a day designed to make the breadth and
+            ambition of Rosenstiel science visible to the entire school.
+          </p>
+        </div>
+        <div class="dean-banner-meta">
+          <strong>Dean Ben Kirtman</strong>
+          Rosenstiel School<br>University of Miami
+        </div>
+      </div>
+    </section>
+
+    <!-- DEAN'S LETTER / PULL-QUOTE -->
+    <section class="container section reveal" style="padding-top:1rem;">
+      <div class="dean-quote" id="dean-quote">
+        <p class="quote-kicker"><i class="fas fa-quote-left"></i> A note from the Dean</p>
+
+        <blockquote>
+          <p>
+            &ldquo;Rosenstiel science spans the deep ocean to the upper
+            atmosphere, and our impact comes from the seams between those
+            communities. Research Day puts that breadth in one room, in one
+            day, and makes it visible to the whole school.&rdquo;
+          </p>
+        </blockquote>
+
+        <div class="quote-attrib">
+          <div class="quote-avatar" aria-hidden="true">BK</div>
+          <div class="quote-attrib-text">
+            <span class="quote-attrib-name">Dean Ben Kirtman</span>
+            <span class="quote-attrib-role">Rosenstiel School of Marine, Atmospheric, and Earth Science · University of Miami</span>
+          </div>
+          <span class="quote-placeholder-note" title="Replace with approved text from the Dean's office">
+            <i class="fas fa-pen-to-square"></i> Draft — awaiting Dean's approval
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="container section reveal">
+      <p class="section-kicker">About the Day</p>
+      <h2><span class="section-icon" style="background:linear-gradient(135deg,var(--coral),#FF8B5B)"><i class="fas fa-info-circle"></i></span> One day. The whole school.</h2>
+      <p class="dropcap" style="font-size:1.12rem;">
         Rosenstiel Research Day is the annual school-wide gathering of the
         Rosenstiel School of Marine, Atmospheric, and Earth Science. The day
         brings together students, postdocs, staff, and faculty for a full
@@ -67,15 +178,58 @@
         physical and biological oceanography, atmospheric science, climate,
         marine ecosystems, and the tools that change how we do science.
       </p>
-      <p>
-        The event is supported by Dean Ben Kirtman and organized by Guoqing
-        Lin, Associate Dean of Research.
-      </p>
     </section>
 
-    <section class="container section">
-      <h2><span class="section-icon" style="background:var(--warm-sky)"><i class="fas fa-list-check"></i></span> What the Day Includes</h2>
-      <div class="cards">
+    <!-- SCOPE OF SCIENCE -->
+    <section class="container section reveal">
+      <p class="section-kicker">Scope of Science</p>
+      <h2><span class="section-icon" style="background:linear-gradient(135deg,var(--reef),var(--shoal))"><i class="fas fa-globe"></i></span> From the deep ocean to the upper atmosphere.</h2>
+      <p class="scope-intro">
+        Rosenstiel research spans the full Earth system. Research Day brings
+        these communities under one roof for a single day of cross-disciplinary
+        exchange.
+      </p>
+      <div class="scope-grid">
+        <div class="scope-item" data-c="ocean">
+          <div class="scope-icon"><i class="fas fa-water"></i></div>
+          <div class="scope-name">Physical Oceanography</div>
+        </div>
+        <div class="scope-item" data-c="bio">
+          <div class="scope-icon"><i class="fas fa-fish"></i></div>
+          <div class="scope-name">Marine Biology &amp; Ecology</div>
+        </div>
+        <div class="scope-item" data-c="atmos">
+          <div class="scope-icon"><i class="fas fa-cloud-sun-rain"></i></div>
+          <div class="scope-name">Atmospheric Science</div>
+        </div>
+        <div class="scope-item" data-c="climate">
+          <div class="scope-icon"><i class="fas fa-temperature-high"></i></div>
+          <div class="scope-name">Climate &amp; Coastal Hazards</div>
+        </div>
+        <div class="scope-item" data-c="earth">
+          <div class="scope-icon"><i class="fas fa-mountain"></i></div>
+          <div class="scope-name">Seismology &amp; Geodynamics</div>
+        </div>
+        <div class="scope-item" data-c="tech">
+          <div class="scope-icon"><i class="fas fa-satellite"></i></div>
+          <div class="scope-name">Observation &amp; Sensing</div>
+        </div>
+        <div class="scope-item" data-c="data">
+          <div class="scope-icon"><i class="fas fa-chart-line"></i></div>
+          <div class="scope-name">Data Science &amp; AI for Earth</div>
+        </div>
+        <div class="scope-item" data-c="policy">
+          <div class="scope-icon"><i class="fas fa-handshake"></i></div>
+          <div class="scope-name">Policy &amp; Outreach</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMATS -->
+    <section class="container section reveal">
+      <p class="section-kicker">Program at a Glance</p>
+      <h2><span class="section-icon" style="background:linear-gradient(135deg,var(--mid),var(--reef))"><i class="fas fa-list-check"></i></span> What the day includes.</h2>
+      <div class="cards cards-4">
         <div class="card card-oral">
           <div class="card-icon"><i class="fas fa-microphone"></i></div>
           <h3>Oral Sessions</h3>
@@ -99,22 +253,137 @@
       </div>
     </section>
 
-    <section class="container section">
-      <h2><span class="section-icon" style="background:var(--warm-sun)"><i class="fas fa-calendar-check"></i></span> Key Dates</h2>
-      <ul class="keydates">
+    <!-- AWARDS WALL -->
+    <section class="container section reveal">
+      <p class="section-kicker">Research &amp; Presentation Excellence</p>
+      <h2><span class="section-icon" style="background:linear-gradient(135deg,var(--sun),var(--coral))"><i class="fas fa-award"></i></span> Awards that recognize the best of Rosenstiel.</h2>
+
+      <div class="awards-wall">
+        <div class="awards-wall-header">
+          <p class="awards-wall-kicker">A Tradition of Excellence</p>
+          <h3 class="awards-wall-title">Five awards. Voted by your peers and a faculty panel.</h3>
+          <p class="awards-wall-sub">
+            Research Day closes with a recognition ceremony honoring presentations
+            across categories — from scientific storytelling to lightning-talk impact.
+          </p>
+        </div>
+        <div class="awards-grid">
+          <div class="award-card">
+            <div class="award-icon"><i class="fas fa-heart"></i></div>
+            <h4 class="award-name">People's Choice</h4>
+            <p class="award-desc">Voted by attendees for the presentation that most captured the audience's attention.</p>
+          </div>
+          <div class="award-card">
+            <div class="award-icon"><i class="fas fa-book-open"></i></div>
+            <h4 class="award-name">Best Science Storytelling</h4>
+            <p class="award-desc">For communicating scientific ideas with exceptional clarity and narrative flow.</p>
+          </div>
+          <div class="award-card">
+            <div class="award-icon"><i class="fas fa-palette"></i></div>
+            <h4 class="award-name">Best Visual Design</h4>
+            <p class="award-desc">For outstanding visual clarity and design that enhanced scientific understanding.</p>
+          </div>
+          <div class="award-card">
+            <div class="award-icon"><i class="fas fa-bolt"></i></div>
+            <h4 class="award-name">Most Memorable Lightning Talk</h4>
+            <p class="award-desc">For a lightning talk that stood out for clarity, creativity, and lasting impact.</p>
+          </div>
+          <div class="award-card">
+            <div class="award-icon"><i class="fas fa-star"></i></div>
+            <h4 class="award-name">Outstanding Student Presentation</h4>
+            <p class="award-desc">For a student-led presentation demonstrating scientific excellence and effective communication.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEY DATES (horizontal timeline + mobile-fallback list) -->
+    <section class="container section reveal">
+      <p class="section-kicker">Mark Your Calendar</p>
+      <div class="section-head">
+        <h2><span class="section-icon" style="background:linear-gradient(135deg,var(--sun),#FFB42E)"><i class="fas fa-calendar-check"></i></span> The path to Research Day.</h2>
+        <p class="lede">Eight milestones from the call for abstracts through the event itself.</p>
+      </div>
+
+      <!-- Desktop: horizontal timeline -->
+      <div class="timeline-wrap" aria-label="Timeline of key dates">
+        <ol class="timeline">
+          <li class="timeline-node" data-kind="open">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-label-block">
+              <p class="timeline-label">Nov 3, 2026</p>
+              <p class="timeline-sub">Submission opens</p>
+            </div>
+          </li>
+          <li class="timeline-node" data-kind="reminder">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-label-block">
+              <p class="timeline-label">Nov 17, 2026</p>
+              <p class="timeline-sub">Reminder #1</p>
+            </div>
+          </li>
+          <li class="timeline-node" data-kind="reminder">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-label-block">
+              <p class="timeline-label">Dec 1, 2026</p>
+              <p class="timeline-sub">Reminder #2</p>
+            </div>
+          </li>
+          <li class="timeline-node" data-kind="reminder">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-label-block">
+              <p class="timeline-label">Dec 15, 2026</p>
+              <p class="timeline-sub">Final reminder</p>
+            </div>
+          </li>
+          <li class="timeline-node" data-kind="deadline">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-label-block">
+              <p class="timeline-label">Dec 18, 2026</p>
+              <p class="timeline-sub">Deadline · 5pm ET</p>
+            </div>
+          </li>
+          <li class="timeline-node" data-kind="confirm">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-label-block">
+              <p class="timeline-label">Dec 21, 2026</p>
+              <p class="timeline-sub">Confirmations sent</p>
+            </div>
+          </li>
+          <li class="timeline-node" data-kind="finalize">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-label-block">
+              <p class="timeline-label">Jan 8, 2027</p>
+              <p class="timeline-sub">Titles &amp; poster needs locked</p>
+            </div>
+          </li>
+          <li class="timeline-node" data-kind="event">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-label-block">
+              <p class="timeline-label">Mar 19, 2027</p>
+              <p class="timeline-sub">Research Day</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Mobile: stacked list (same data) -->
+      <ul class="keydates is-fallback">
         <li><span class="date"><i class="fas fa-circle-dot"></i> Tue, Nov 3, 2026</span><span class="label">Abstract submission opens (submission = registration)</span></li>
         <li><span class="date"><i class="fas fa-bell"></i> Tue, Nov 17, 2026</span><span class="label">Reminder #1 to school</span></li>
         <li><span class="date"><i class="fas fa-bell"></i> Tue, Dec 1, 2026</span><span class="label">Reminder #2 (post-Thanksgiving)</span></li>
         <li><span class="date"><i class="fas fa-bell"></i> Tue, Dec 15, 2026</span><span class="label">Final reminder</span></li>
-        <li><span class="date"><i class="fas fa-lock"></i> Fri, Dec 18, 2026 · 5:00 pm ET</span><span class="label">Submission &amp; audience-only sign-up close</span></li>
+        <li class="is-deadline"><span class="date"><i class="fas fa-lock"></i> Fri, Dec 18, 2026 · 5:00 pm ET</span><span class="label">Submission &amp; audience-only sign-up close</span></li>
         <li><span class="date"><i class="fas fa-envelope"></i> Mon, Dec 21, 2026</span><span class="label">Confirmation &amp; next-steps email sent</span></li>
         <li><span class="date"><i class="fas fa-check-double"></i> Fri, Jan 8, 2027</span><span class="label">Presenters finalize titles and poster needs</span></li>
-        <li><span class="date"><i class="fas fa-glass-cheers"></i> Fri, Mar 19, 2027</span><span class="label">Rosenstiel Research Day</span></li>
+        <li class="is-event"><span class="date"><i class="fas fa-glass-cheers"></i> Fri, Mar 19, 2027</span><span class="label">Rosenstiel Research Day</span></li>
       </ul>
     </section>
 
-    <section class="container section">
-      <h2><span class="section-icon" style="background:var(--warm-mint)"><i class="fas fa-users"></i></span> Who Should Participate</h2>
+    <!-- WHO -->
+    <section class="container section reveal">
+      <p class="section-kicker">Everyone Is Invited</p>
+      <h2><span class="section-icon" style="background:linear-gradient(135deg,var(--kelp),#3FA86F)"><i class="fas fa-users"></i></span> Who should participate.</h2>
       <div class="cards">
         <div class="card">
           <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
@@ -134,14 +403,21 @@
       </div>
     </section>
 
-    <section class="container section">
-      <h2><span class="section-icon" style="background:var(--warm-lavender)"><i class="fas fa-envelope"></i></span> Contact</h2>
-      <p>
-        Questions? Email Guoqing Lin at
+    <!-- CONTACT -->
+    <section class="container section reveal">
+      <p class="section-kicker">Questions?</p>
+      <h2><span class="section-icon" style="background:linear-gradient(135deg,var(--lightning),#A47AE2)"><i class="fas fa-envelope"></i></span> Get in touch.</h2>
+      <p style="font-size:1.05rem;">
+        Email Guoqing Lin, Associate Dean of Research, at
         <a href="mailto:glin@miami.edu">glin@miami.edu</a>.
       </p>
     </section>
   </main>
+
+  <!-- Sticky submit CTA (appears after hero scrolls past) -->
+  <a class="sticky-cta" id="stickyCta" href="submit.html">
+    <i class="fas fa-paper-plane"></i> Submit an Abstract
+  </a>
 
   <footer class="site-footer">
     <div class="accent-bar"></div>
@@ -150,5 +426,82 @@
       <p><a href="index.html">Home</a> · <a href="program.html">Program</a> · <a href="submit.html">Submit</a> · <a href="register.html">Attend Only</a></p>
     </div>
   </footer>
+
+  <script>
+    // Trigger the hero-title year underline animation shortly after load
+    window.addEventListener('load', function () {
+      var yr = document.querySelector('.hero h1.hero-title .ht-year');
+      if (yr) {
+        setTimeout(function () { yr.classList.add('is-underlined'); }, 380);
+      }
+    });
+
+    // Countdown to Friday, March 19, 2027 9:00 AM ET (UTC-4 on that date, DST)
+    (function () {
+      var target = new Date('2027-03-19T09:00:00-04:00').getTime();
+      var els = {
+        d: document.getElementById('cd-days'),
+        h: document.getElementById('cd-hours'),
+        m: document.getElementById('cd-mins'),
+        s: document.getElementById('cd-secs')
+      };
+      function pad(n) { return n < 10 ? '0' + n : '' + n; }
+      function tick() {
+        var diff = target - Date.now();
+        if (diff <= 0) {
+          els.d.textContent = '0'; els.h.textContent = '00'; els.m.textContent = '00'; els.s.textContent = '00';
+          return;
+        }
+        var days = Math.floor(diff / 86400000);
+        var hours = Math.floor((diff % 86400000) / 3600000);
+        var mins = Math.floor((diff % 3600000) / 60000);
+        var secs = Math.floor((diff % 60000) / 1000);
+        els.d.textContent = days;
+        els.h.textContent = pad(hours);
+        els.m.textContent = pad(mins);
+        els.s.textContent = pad(secs);
+      }
+      tick();
+      setInterval(tick, 1000);
+    })();
+
+    // Scroll reveal (progressive enhancement)
+    (function () {
+      if (!('IntersectionObserver' in window)) return;
+      // Only enable the hidden-then-revealed effect when JS is fully available.
+      document.body.classList.add('js-reveal');
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+      // Safety: if for any reason nothing has revealed within 1.5s, show everything.
+      setTimeout(function () {
+        document.querySelectorAll('.reveal:not(.is-visible)').forEach(function (el) {
+          var r = el.getBoundingClientRect();
+          if (r.top < window.innerHeight && r.bottom > 0) el.classList.add('is-visible');
+        });
+      }, 1500);
+    })();
+
+    // Sticky CTA visibility
+    (function () {
+      var cta = document.getElementById('stickyCta');
+      if (!cta) return;
+      var hero = document.querySelector('.hero');
+      function onScroll() {
+        if (!hero) return;
+        var heroBottom = hero.getBoundingClientRect().bottom;
+        if (heroBottom < 60) cta.classList.add('is-visible');
+        else cta.classList.remove('is-visible');
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+  </script>
 </body>
 </html>
