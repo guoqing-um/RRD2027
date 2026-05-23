@@ -3,7 +3,7 @@
    Big fonts, card layouts, warm palette, eye-catching design
    ========================================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700;8..60,800&family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
   /* --- LIGHT WARM COLORFUL palette --- */
@@ -37,7 +37,8 @@
   --line-warm:      #F5E6D0;
 
   /* --- Typography --- */
-  --font-display: "Fraunces", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --font-display: "Source Serif 4", "Source Serif Pro", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --font-title:   "Fraunces", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
   --font-sans:    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
   /* --- Layout --- */
@@ -271,7 +272,7 @@ img, svg { max-width: 100%; display: block; }
   padding-top: 6rem;
   padding-bottom: 9rem;
   text-align: center;
-  max-width: 900px;
+  max-width: 1140px;        /* widened to give the lede room to breathe */
   margin-left: auto;
   margin-right: auto;
 }
@@ -371,7 +372,7 @@ img, svg { max-width: 100%; display: block; }
   font-size: clamp(3.4rem, 9vw, 7rem);
   line-height: 1.18;        /* extra room for italic "y" descender */
   letter-spacing: -0.038em;
-  font-variation-settings: "opsz" 144;
+  font-variation-settings: "opsz" 60;
   /* Gradient that keeps strong contrast at BOTH ends — the "y" descender lands in deep brick */
   background: linear-gradient(95deg,
     #A02B1E 0%,         /* deep brick red */
@@ -420,7 +421,7 @@ img, svg { max-width: 100%; display: block; }
   letter-spacing: 0.01em;
   line-height: 0.95;
   color: var(--deep-navy);
-  font-variation-settings: "opsz" 144;
+  font-variation-settings: "opsz" 60;
   position: relative;
   display: inline-block;
 }
@@ -478,7 +479,7 @@ img, svg { max-width: 100%; display: block; }
 
 /* Small institutional line above */
 .hero h1.hero-title--editorial .ht-school {
-  font-family: var(--font-display);
+  font-family: var(--font-title);
   font-weight: 500;
   font-size: clamp(0.95rem, 1.5vw, 1.25rem);
   text-transform: uppercase;
@@ -504,13 +505,13 @@ img, svg { max-width: 100%; display: block; }
 
 .hero h1.hero-title--editorial .ht-event {
   /* OVERRIDE the gradient variant — solid editorial treatment */
-  font-family: var(--font-display);
+  font-family: var(--font-title);
   font-weight: 700;
   font-style: normal;          /* roman, not italic */
   font-size: clamp(3.3rem, 8.5vw, 6.4rem);
   line-height: 1.05;
   letter-spacing: -0.022em;
-  font-variation-settings: "opsz" 144, "SOFT" 30;
+  font-variation-settings: "opsz" 144;
 
   /* RESET gradient + halo + shadow */
   background: none;
@@ -528,7 +529,7 @@ img, svg { max-width: 100%; display: block; }
 }
 
 .hero h1.hero-title--editorial .ht-year {
-  font-family: var(--font-display);
+  font-family: var(--font-title);
   font-weight: 700;
   font-style: normal;
   font-size: clamp(3.3rem, 8.5vw, 6.4rem);
@@ -561,11 +562,16 @@ img, svg { max-width: 100%; display: block; }
   font-family: var(--font-display);
   font-style: italic;
   font-weight: 500;
-  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  font-size: clamp(1.1rem, 1.8vw, 1.5rem);   /* trimmed so it fits on one line */
   color: var(--deep-teal);
   margin: 0 0 2rem;
-  max-width: 42ch;
+  max-width: none;
   line-height: 1.4;
+  white-space: nowrap;     /* keep on one line on desktop */
+}
+
+@media (max-width: 720px) {
+  .hero .tagline { white-space: normal; }   /* allow wrapping on narrow viewports */
 }
 
 .hero-meta {
@@ -593,12 +599,22 @@ img, svg { max-width: 100%; display: block; }
 .hero-meta-item strong { color: var(--deep-navy); font-weight: 700; }
 
 .hero .lede {
-  font-size: 1.25rem;
-  line-height: 1.8;
+  font-size: 1.15rem;
+  line-height: 1.65;
   color: var(--ink-soft);
-  max-width: 60ch;
   margin: 0 0 2.5rem;
+  margin-left: auto !important;   /* off-center toward the right */
+  margin-right: 4.5rem !important;  /* a hair right of center */
   font-weight: 500;
+  text-wrap: pretty;
+  max-width: 58rem;
+}
+
+@media (max-width: 720px) {
+  .hero .lede {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
 }
 
 .cta-row {
@@ -609,7 +625,7 @@ img, svg { max-width: 100%; display: block; }
 
 .cta-note {
   margin: 1.8rem 0 0;
-  max-width: 65ch;
+  max-width: 58rem;         /* match the lede's slightly narrower width */
   font-size: 1.05rem;
   color: var(--ink-soft);
   line-height: 1.7;
@@ -617,6 +633,7 @@ img, svg { max-width: 100%; display: block; }
   padding: 1.1rem 1.3rem;
   border-radius: var(--radius-sm);
   border-left: 4px solid var(--warm-sun);
+  text-wrap: pretty;
 }
 
 .cta-note strong { color: var(--deep-coral); }
@@ -888,7 +905,7 @@ img, svg { max-width: 100%; display: block; }
    ========================================================= */
 
 .section {
-  padding: 5rem 1.5rem;
+  padding: 3.25rem 1.5rem;
 }
 
 .section h2 {
@@ -898,22 +915,23 @@ img, svg { max-width: 100%; display: block; }
   letter-spacing: -0.02em;
   color: var(--deep-navy);
   margin: 0 0 1.8rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+  display: block;        /* Title text starts flush left, not pushed by inline icon */
   line-height: 1.15;
 }
 
+/* Section icon now stacks above the title as a small visual marker
+   instead of sitting inline with the heading text. */
 .section h2 .section-icon {
   width: 52px;
   height: 52px;
-  display: inline-grid;
+  display: grid;                /* block-level so it stacks above the title */
   place-items: center;
   border-radius: 14px;
   font-size: 1.2rem;
   color: #fff;
   box-shadow: var(--shadow-sm);
   flex-shrink: 0;
+  margin: 0 0 0.9rem;           /* gap between the icon and the title text below */
 }
 
 .section h3 {
@@ -1063,8 +1081,16 @@ a:hover { color: var(--warm-coral); border-bottom-color: var(--warm-coral); }
 
 .scope-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(4, 1fr);    /* 4 disciplines per row → 2 rows */
   gap: 1.2rem;
+}
+
+@media (max-width: 900px) {
+  .scope-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .scope-grid { grid-template-columns: 1fr; }
 }
 
 .scope-item {
@@ -1481,7 +1507,7 @@ a:hover { color: var(--warm-coral); border-bottom-color: var(--warm-coral); }
 .awards-wall-header {
   position: relative;
   z-index: 1;
-  text-align: center;
+  text-align: left;
   margin: 0 0 3rem;
 }
 
@@ -1511,16 +1537,39 @@ a:hover { color: var(--warm-coral); border-bottom-color: var(--warm-coral); }
   color: var(--ink-soft);
   font-size: 1.15rem;
   max-width: 60ch;
-  margin: 0 auto;
+  margin: 0;
   line-height: 1.6;
 }
 
+/* Awards layout: 3 cards on top, 2 centered cards on bottom.
+   Achieved with flex + computed flex-basis. */
 .awards-grid {
   position: relative;
   z-index: 1;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;     /* centers the trailing row of 2 */
   gap: 1.2rem;
+}
+
+.awards-grid .award-card {
+  flex: 0 1 calc((100% - 2.4rem) / 3);    /* 3 cards per row, accounting for two 1.2rem gaps */
+  max-width: 360px;                        /* keep cards from getting too wide on huge screens */
+  margin: 0;
+}
+
+@media (max-width: 980px) {
+  .awards-grid .award-card {
+    flex-basis: calc((100% - 1.2rem) / 2);  /* 2 per row on tablet */
+    max-width: 460px;
+  }
+}
+
+@media (max-width: 600px) {
+  .awards-grid .award-card {
+    flex-basis: 100%;                       /* stacked on mobile */
+    max-width: none;
+  }
 }
 
 .award-card {
@@ -1836,6 +1885,118 @@ body.js-reveal .reveal.is-visible { opacity: 1; transform: translateY(0); }
 .site-footer a:hover {
   color: #fff;
   border-bottom-color: var(--warm-sun);
+}
+
+/* =========================================================
+   QR codes — "Scan to join" cards
+   ========================================================= */
+
+.qr-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.4rem;
+  margin: 1.2rem 0 0;
+  max-width: 760px;
+}
+
+.qr-row.is-centered { margin-left: auto; margin-right: auto; }
+
+.qr-card {
+  background: var(--surface-white);
+  border: 1px solid var(--line-warm);
+  border-radius: var(--radius);
+  padding: 1.6rem 1.4rem 1.5rem;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 220ms cubic-bezier(.2,.7,.3,1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.qr-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--warm-coral), var(--warm-sun));
+}
+
+.qr-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--warm-coral);
+  box-shadow: var(--shadow-md);
+  color: inherit;
+}
+
+.qr-card .qr-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--deep-coral);
+  margin: 0;
+}
+
+.qr-card .qr-image {
+  width: 168px;
+  height: 168px;
+  background: #fff;
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid var(--line-warm);
+  display: grid;
+  place-items: center;
+}
+
+.qr-card .qr-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.qr-card .qr-label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--deep-navy);
+  margin: 0;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.qr-card .qr-label i { color: var(--warm-coral); font-size: 0.95em; }
+
+.qr-card .qr-sub {
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.45;
+  max-width: 28ch;
+}
+
+/* Single-QR variant (centered, no grid) */
+.qr-solo {
+  display: flex;
+  justify-content: center;
+  margin: 1.2rem 0 0;
+}
+
+/* Left-aligned variant — for sections that left-align their content */
+.qr-solo.qr-solo--left { justify-content: flex-start; }
+
+.qr-solo .qr-card { max-width: 320px; }
+
+@media (max-width: 540px) {
+  .qr-card .qr-image { width: 150px; height: 150px; }
 }
 
 /* =========================================================
@@ -2226,7 +2387,7 @@ body.js-reveal .reveal.is-visible { opacity: 1; transform: translateY(0); }
   .awards { grid-template-columns: 1fr; }
   .awards-grid { grid-template-columns: 1fr; }
   .keydates li { grid-template-columns: 1fr; }
-  .section { padding: 3.5rem 1.5rem; }
+  .section { padding: 2.5rem 1.5rem; }
   .stat-strip { padding: 1.8rem 1.2rem; }
   .stat-num { font-size: 2.4rem; }
   .dropcap::first-letter { font-size: 3.4rem; padding: 0.35rem 0.6rem 0 0; }
