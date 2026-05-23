@@ -6,6 +6,7 @@
   <title>Attend Only · Rosenstiel Research Day 2027</title>
   <meta name="description" content="Audience-only sign-up for Rosenstiel Research Day 2027. Presenters are registered automatically when they submit an abstract." />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
 <body>
   <header class="site-header">
@@ -18,10 +19,10 @@
         </span>
       </a>
       <nav class="site-nav" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="program.html">Program</a>
-        <a href="submit.html">Submit Abstract</a>
-        <a href="register.html" class="active">Attend Only</a>
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="program.html"><i class="fas fa-calendar-alt"></i> Program</a>
+        <a href="submit.html"><i class="fas fa-file-alt"></i> Submit Abstract</a>
+        <a href="register.html" class="active"><i class="fas fa-user-check"></i> Attend Only</a>
       </nav>
     </div>
   </header>
@@ -29,7 +30,7 @@
   <main>
     <section class="page-header">
       <div class="container">
-        <p class="eyebrow">Audience-Only Sign-Up</p>
+        <p class="eyebrow"><i class="fas fa-user-check"></i> Audience-Only Sign-Up</p>
         <h1>Attend Only</h1>
         <p class="lede">
           Coming as audience — not presenting? Use this short form so we
@@ -41,17 +42,19 @@
 
     <section class="container section">
       <div class="callout callout-highlight">
-        <strong>Presenting an abstract?</strong> You don't need this form.
+        <i class="fas fa-lightbulb"></i>
+        <div><strong>Presenting an abstract?</strong> You don't need this form.
         Submitting an abstract on the
         <a href="submit.html">Submit Abstract</a> page registers you for the
-        event automatically.
+        event automatically.</div>
       </div>
 
       <div class="callout">
-        <strong>Sign-up closes:</strong> Friday, December 18, 2026 at 5:00 pm ET.
+        <i class="fas fa-clock"></i>
+        <div><strong>Sign-up closes:</strong> Friday, December 18, 2026 at 5:00 pm ET.</div>
       </div>
 
-      <h2>What to Expect</h2>
+      <h2><span class="section-icon" style="background:var(--warm-sky)"><i class="fas fa-eye"></i></span> What to Expect</h2>
       <ul class="bulleted">
         <li>A full day of oral talks, lightning talks, and two poster sessions in SALT.</li>
         <li>Morning coffee, lunch, and reception food and drinks are provided.</li>
@@ -61,14 +64,8 @@
     </section>
 
     <section class="container section">
-      <h2>Audience-Only Sign-Up Form</h2>
+      <h2><span class="section-icon" style="background:var(--warm-coral)"><i class="fas fa-clipboard-list"></i></span> Audience-Only Sign-Up Form</h2>
 
-      <!--
-        TODO: Replace the iframe src below with your audience-only Google Form
-        embed URL. This is the short form — abstract submitters use the
-        longer form on submit.html, which doubles as their registration.
-        In Google Forms: Send → Embed HTML → copy the src attribute.
-      -->
       <div class="form-embed">
         <iframe
           src="https://docs.google.com/forms/d/e/PLACEHOLDER_FORM_ID/viewform?embedded=true"
@@ -83,7 +80,7 @@
       </div>
 
       <p class="form-fallback">
-        Cannot use the form? Email
+        <i class="fas fa-envelope"></i> Cannot use the form? Email
         <a href="mailto:glin@miami.edu?subject=RRD%202027%20Audience%20Sign-Up">glin@miami.edu</a>
         with your name, role, department, dietary restrictions, and whether
         you'll attend lunch and the social hour.
@@ -91,7 +88,7 @@
     </section>
 
     <section class="container section">
-      <h2>Accessibility</h2>
+      <h2><span class="section-icon" style="background:var(--warm-mint)"><i class="fas fa-wheelchair"></i></span> Accessibility</h2>
       <p>
         If you have accessibility needs or require accommodations, please
         note them in the form or contact
@@ -101,12 +98,12 @@
     </section>
 
     <section class="container section">
-      <h2>Reminder Schedule</h2>
+      <h2><span class="section-icon" style="background:var(--warm-sun)"><i class="fas fa-bell"></i></span> Reminder Schedule</h2>
       <p>If you tend to forget — we'll send brief reminders:</p>
       <ul class="bulleted">
-        <li><strong>Tue, Nov 17, 2026</strong> — Reminder #1</li>
-        <li><strong>Tue, Dec 1, 2026</strong> — Reminder #2 (post-Thanksgiving)</li>
-        <li><strong>Tue, Dec 15, 2026</strong> — Final reminder</li>
+        <li><strong><i class="fas fa-bell" style="color:var(--warm-sun)"></i> Tue, Nov 17, 2026</strong> — Reminder #1</li>
+        <li><strong><i class="fas fa-bell" style="color:var(--warm-sun)"></i> Tue, Dec 1, 2026</strong> — Reminder #2 (post-Thanksgiving)</li>
+        <li><strong><i class="fas fa-bell" style="color:var(--warm-sun)"></i> Tue, Dec 15, 2026</strong> — Final reminder</li>
       </ul>
     </section>
   </main>
