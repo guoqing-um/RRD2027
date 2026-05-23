@@ -1995,6 +1995,31 @@ body.js-reveal .reveal.is-visible { opacity: 1; transform: translateY(0); }
 
 .qr-solo .qr-card { max-width: 320px; }
 
+/* Contact + QR side-by-side row */
+.contact-row {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact-row .contact-text {
+  flex: 1 1 380px;
+  min-width: 0;
+}
+
+.contact-row .contact-qr {
+  flex: 0 0 auto;
+  width: 300px;
+  max-width: 100%;
+}
+
+@media (max-width: 720px) {
+  .contact-row { gap: 1.8rem; }
+  .contact-row .contact-qr { width: 100%; max-width: 320px; }
+}
+
 @media (max-width: 540px) {
   .qr-card .qr-image { width: 150px; height: 150px; }
 }
