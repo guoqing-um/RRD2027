@@ -1,43 +1,43 @@
 /* =========================================================
-   Rosenstiel Research Day 2027 — LIGHT OCEAN MARINE stylesheet
-   Sea-led palette: marine blues, teal, seafoam, with warm sand
-   accents and a small coral-reef pop. Variable names preserved
-   from the prior warm palette so structure stays intact.
+   Rosenstiel Research Day 2027 — SUNSET COASTAL stylesheet
+   Terracotta, ochre, dusty rose, faded teal on warm cream.
+   Warm-led but grown-up — golden-hour by the water.
+   Variable names preserved so layout structure stays intact.
    ========================================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700;8..60,800&family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  /* --- LIGHT OCEAN palette ---
-     (variable names kept from warm palette; values shifted to marine) */
-  --warm-coral:     #2C7DA0;   /* primary marine blue (was coral) */
-  --coral-light:    #E1EEF4;   /* pale sea-mist */
-  --warm-sky:       #61A5C2;   /* atlantic sky */
-  --sky-light:      #DCEEF6;   /* horizon sky */
-  --warm-sun:       #F4C95D;   /* warm sun glint (kept warm) */
-  --sun-light:      #FAF1DC;   /* pale sand */
-  --warm-lavender:  #468FAF;   /* depth teal (was lavender) */
-  --lavender-light: #E2EEF3;   /* shallow mist */
-  --warm-mint:      #89C2D9;   /* seafoam */
-  --mint-light:     #E8F4F8;   /* pale seafoam */
-  --warm-peach:     #A9D6E5;   /* shallow water (was peach) */
-  --peach-light:    #ECF5F8;   /* far horizon */
+  /* --- SUNSET COASTAL palette ---
+     (variable names kept; values shifted to terracotta + faded teal) */
+  --warm-coral:     #B8553F;   /* terracotta (primary) */
+  --coral-light:    #F5E4DE;   /* pale terracotta wash */
+  --warm-sky:       #6F9A9C;   /* faded sunset-teal */
+  --sky-light:      #DEE9E8;   /* pale dusty teal */
+  --warm-sun:       #D49A3F;   /* golden ochre */
+  --sun-light:      #F6EAD0;   /* pale ochre */
+  --warm-lavender:  #A8746E;   /* dusty mauve-rose */
+  --lavender-light: #EFE0DE;   /* pale mauve */
+  --warm-mint:      #B89B72;   /* sand olive */
+  --mint-light:     #EFE5CE;   /* pale sand-olive */
+  --warm-peach:     #C97B6E;   /* dusty rose */
+  --peach-light:    #F2DEDA;   /* pale rose */
 
   /* --- Deep accents for contrast --- */
-  --deep-navy:      #012A4A;   /* abyss navy */
-  --deep-teal:      #014F86;   /* deep marine */
-  --deep-coral:     #C44536;   /* coral-reef accent (small pops) */
-  --deep-gold:      #B5731A;   /* burnished bronze */
+  --deep-navy:      #2C4A55;   /* dusty marine ink (still bluish, but grayed) */
+  --deep-teal:      #4A6F6E;   /* deep faded teal */
+  --deep-coral:     #8E3A20;   /* rust / oxblood */
+  --deep-gold:      #8E5A1A;   /* burnished bronze */
 
-  /* --- Neutrals (a hint of warmth retained so it doesn't go clinical) --- */
-  --bg:             #FBFAF6;   /* shell white with a whisper of warmth */
-  --bg-warm:        #F6F4EE;   /* sand-shell */
+  /* --- Neutrals (warm cream base, sandy ledger) --- */
+  --bg:             #FAF1DF;   /* warm cream */
+  --bg-warm:        #F5E8D2;   /* sandier ledger */
   --surface-white:  #FFFFFF;
-  --ink:            #0F2A3F;   /* deep marine ink */
-  --ink-soft:       #355C7D;   /* soft navy */
-  --muted:          #6E89A0;   /* misty muted */
-  --line:           #D9E4EA;   /* sea line */
-  --line-warm:      #E4DECE;   /* sand line (kept warm for warm sections) */
+  --ink:            #2B1F18;   /* warm dark espresso */
+  --ink-soft:       #5A4A3D;   /* warm taupe */
+  --muted:          #8A7766;   /* dusty muted */
+  --line:           #E8D9C0;   /* sand line */
+  --line-warm:      #EAD9B8;   /* warm sand line */
 
   /* --- Typography --- */
   --font-display: "Source Serif 4", "Source Serif Pro", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
@@ -50,12 +50,12 @@
   --radius-sm: 14px;
   --container-w: 1200px;
 
-  /* --- Shadows (soft, marine-tinted) --- */
-  --shadow-xs: 0 2px 8px rgba(1, 74, 124, 0.06);
-  --shadow-sm: 0 4px 16px rgba(1, 74, 124, 0.08);
-  --shadow-md: 0 12px 32px rgba(1, 74, 124, 0.12);
-  --shadow-lg: 0 20px 50px rgba(1, 74, 124, 0.15);
-  --shadow-xl: 0 30px 70px rgba(1, 74, 124, 0.18);
+  /* --- Shadows (soft, terracotta-tinted) --- */
+  --shadow-xs: 0 2px 8px rgba(142, 58, 32, 0.06);
+  --shadow-sm: 0 4px 16px rgba(142, 58, 32, 0.08);
+  --shadow-md: 0 12px 32px rgba(142, 58, 32, 0.12);
+  --shadow-lg: 0 20px 50px rgba(142, 58, 32, 0.15);
+  --shadow-xl: 0 30px 70px rgba(142, 58, 32, 0.18);
 }
 
 * { box-sizing: border-box; }
@@ -109,7 +109,7 @@ img, svg { max-width: 100%; display: block; }
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: saturate(180%) blur(14px);
   -webkit-backdrop-filter: saturate(180%) blur(14px);
-  box-shadow: 0 2px 0 rgba(44, 125, 160, 0.08);
+  box-shadow: 0 2px 0 rgba(184, 85, 63, 0.08);
   position: sticky;
   top: 0;
   z-index: 50;
@@ -146,7 +146,7 @@ img, svg { max-width: 100%; display: block; }
   letter-spacing: 0.03em;
   border-radius: 16px;
   position: relative;
-  box-shadow: 0 8px 20px rgba(44, 125, 160, 0.35), inset 0 1px 0 rgba(255,255,255,0.3);
+  box-shadow: 0 8px 20px rgba(184, 85, 63, 0.35), inset 0 1px 0 rgba(255,255,255,0.3);
 }
 
 .brand-mark::after {
@@ -211,7 +211,7 @@ img, svg { max-width: 100%; display: block; }
 .site-nav a.active {
   color: #fff;
   background: linear-gradient(135deg, var(--warm-coral), var(--warm-peach));
-  box-shadow: 0 6px 18px rgba(44, 125, 160, 0.35);
+  box-shadow: 0 6px 18px rgba(184, 85, 63, 0.35);
 }
 
 .site-nav a.active i { color: #fff; }
@@ -224,7 +224,7 @@ img, svg { max-width: 100%; display: block; }
   position: relative;
   background:
     radial-gradient(900px 500px at 80% 10%, rgba(110, 203, 245, 0.25), transparent 60%),
-    radial-gradient(800px 600px at 10% 90%, rgba(44, 125, 160, 0.15), transparent 60%),
+    radial-gradient(800px 600px at 10% 90%, rgba(184, 85, 63, 0.15), transparent 60%),
     linear-gradient(180deg, var(--sky-light) 0%, var(--bg) 45%, var(--sun-light) 85%, var(--peach-light) 100%);
   color: var(--ink);
   overflow: hidden;
@@ -237,7 +237,7 @@ img, svg { max-width: 100%; display: block; }
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(3px 3px at 12% 18%, rgba(44, 125, 160, 0.4), transparent 60%),
+    radial-gradient(3px 3px at 12% 18%, rgba(184, 85, 63, 0.4), transparent 60%),
     radial-gradient(2px 2px at 27% 62%, rgba(110, 203, 245, 0.5), transparent 60%),
     radial-gradient(3px 3px at 48% 33%, rgba(255, 209, 102, 0.4), transparent 60%),
     radial-gradient(2px 2px at 71% 76%, rgba(201, 160, 220, 0.4), transparent 60%),
@@ -307,8 +307,8 @@ img, svg { max-width: 100%; display: block; }
   font-size: 0.85rem;
   font-weight: 700;
   color: var(--deep-coral);
-  background: rgba(44, 125, 160, 0.12);
-  border: 1px solid rgba(44, 125, 160, 0.3);
+  background: rgba(184, 85, 63, 0.12);
+  border: 1px solid rgba(184, 85, 63, 0.3);
   padding: 0.55rem 1.1rem;
   border-radius: 999px;
   margin: 0 0 1.6rem;
@@ -376,13 +376,13 @@ img, svg { max-width: 100%; display: block; }
   line-height: 1.18;        /* extra room for italic "y" descender */
   letter-spacing: -0.038em;
   font-variation-settings: "opsz" 60;
-  /* Gradient that keeps strong contrast at BOTH ends — the "y" descender lands in deep navy */
+  /* Sunset gradient — rust → terracotta → ochre → rust, golden-hour sweep */
   background: linear-gradient(95deg,
-    #012A4A 0%,         /* abyss navy */
-    #01497C 18%,        /* deep marine */
-    #2C7DA0 45%,        /* atlantic blue */
-    #468FAF 72%,        /* mid teal */
-    #013A63 100%);      /* deep marine — strong contrast for descender */
+    #6B2616 0%,         /* deep oxblood */
+    #8E3A20 18%,        /* rust */
+    #B8553F 45%,        /* terracotta */
+    #D49A3F 72%,        /* golden ochre */
+    #6B2616 100%);      /* deep oxblood — strong contrast for descender */
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -393,8 +393,8 @@ img, svg { max-width: 100%; display: block; }
   padding-right: 0.05em;    /* italic lean room */
   overflow: visible;
   filter:
-    drop-shadow(0 4px 8px rgba(1, 74, 124, 0.30))
-    drop-shadow(0 18px 36px rgba(1, 74, 124, 0.30));
+    drop-shadow(0 4px 8px rgba(142, 58, 32, 0.30))
+    drop-shadow(0 18px 36px rgba(184, 85, 63, 0.30));
 }
 
 /* Make sure no ancestor clips the descender */
@@ -409,7 +409,7 @@ img, svg { max-width: 100%; display: block; }
   position: absolute;
   inset: 8% -3% 8% -3%;
   background:
-    radial-gradient(60% 70% at 30% 50%, rgba(44, 125, 160, 0.22), transparent 75%),
+    radial-gradient(60% 70% at 30% 50%, rgba(184, 85, 63, 0.22), transparent 75%),
     radial-gradient(55% 70% at 75% 50%, rgba(255, 209, 102, 0.22), transparent 75%);
   filter: blur(18px);
   z-index: -1;
@@ -589,7 +589,7 @@ img, svg { max-width: 100%; display: block; }
   align-items: center;
   gap: 0.5rem;
   background: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(44, 125, 160, 0.2);
+  border: 1px solid rgba(184, 85, 63, 0.2);
   padding: 0.7rem 1.1rem;
   border-radius: 999px;
   font-size: 1.05rem;
@@ -664,7 +664,7 @@ img, svg { max-width: 100%; display: block; }
 
 .countdown-cell {
   background: rgba(255, 255, 255, 0.8);
-  border: 2px solid rgba(44, 125, 160, 0.2);
+  border: 2px solid rgba(184, 85, 63, 0.2);
   border-radius: var(--radius);
   padding: 1.2rem 1.5rem;
   min-width: 100px;
@@ -739,18 +739,18 @@ img, svg { max-width: 100%; display: block; }
 .btn-primary {
   background: linear-gradient(135deg, var(--warm-coral) 0%, var(--warm-peach) 100%);
   color: #fff;
-  box-shadow: 0 12px 30px rgba(44, 125, 160, 0.4), inset 0 1px 0 rgba(255,255,255,0.3);
+  box-shadow: 0 12px 30px rgba(184, 85, 63, 0.4), inset 0 1px 0 rgba(255,255,255,0.3);
 }
 
 .btn-primary:hover {
   transform: translateY(-4px);
-  box-shadow: 0 18px 40px rgba(44, 125, 160, 0.55), inset 0 1px 0 rgba(255,255,255,0.35);
+  box-shadow: 0 18px 40px rgba(184, 85, 63, 0.55), inset 0 1px 0 rgba(255,255,255,0.35);
 }
 
 .btn-secondary {
   background: rgba(255, 255, 255, 0.7);
   color: var(--deep-navy);
-  border-color: rgba(44, 125, 160, 0.3);
+  border-color: rgba(184, 85, 63, 0.3);
   backdrop-filter: blur(8px);
   font-weight: 700;
 }
@@ -852,7 +852,7 @@ img, svg { max-width: 100%; display: block; }
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(3px 3px at 18% 28%, rgba(44, 125, 160, 0.3), transparent 60%),
+    radial-gradient(3px 3px at 18% 28%, rgba(184, 85, 63, 0.3), transparent 60%),
     radial-gradient(2px 2px at 52% 62%, rgba(110, 203, 245, 0.4), transparent 60%),
     radial-gradient(3px 3px at 82% 38%, rgba(255, 209, 102, 0.3), transparent 60%);
   pointer-events: none;
@@ -877,8 +877,8 @@ img, svg { max-width: 100%; display: block; }
   font-size: 0.8rem;
   font-weight: 700;
   color: var(--deep-coral);
-  background: rgba(44, 125, 160, 0.12);
-  border: 1px solid rgba(44, 125, 160, 0.3);
+  background: rgba(184, 85, 63, 0.12);
+  border: 1px solid rgba(184, 85, 63, 0.3);
   padding: 0.5rem 1rem;
   border-radius: 999px;
   margin: 0 0 1.2rem;
@@ -1016,7 +1016,7 @@ a:hover { color: var(--warm-coral); border-bottom-color: var(--warm-coral); }
   color: var(--warm-coral);
   position: relative;
   z-index: 1;
-  box-shadow: 0 16px 40px rgba(44, 125, 160, 0.3), inset 0 -3px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 16px 40px rgba(184, 85, 63, 0.3), inset 0 -3px 8px rgba(0,0,0,0.05);
   flex-shrink: 0;
 }
 
@@ -1112,7 +1112,7 @@ a:hover { color: var(--warm-coral); border-bottom-color: var(--warm-coral); }
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, transparent 0%, rgba(44, 125, 160, 0.04) 100%);
+  background: linear-gradient(135deg, transparent 0%, rgba(184, 85, 63, 0.04) 100%);
   opacity: 0;
   transition: opacity 220ms ease;
 }
@@ -1204,8 +1204,8 @@ a:hover { color: var(--warm-coral); border-bottom-color: var(--warm-coral); }
 .keydates li:hover::before { opacity: 1; }
 
 .keydates li.is-deadline {
-  background: linear-gradient(135deg, rgba(44, 125, 160, 0.08) 0%, transparent 100%);
-  border-color: rgba(44, 125, 160, 0.4);
+  background: linear-gradient(135deg, rgba(184, 85, 63, 0.08) 0%, transparent 100%);
+  border-color: rgba(184, 85, 63, 0.4);
 }
 
 .keydates li.is-deadline::before { background: var(--warm-coral); opacity: 1; }
@@ -1294,7 +1294,7 @@ a:hover { color: var(--warm-coral); border-bottom-color: var(--warm-coral); }
 .card:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-xl);
-  border-color: rgba(44, 125, 160, 0.3);
+  border-color: rgba(184, 85, 63, 0.3);
 }
 
 .card .card-icon {
@@ -1502,7 +1502,7 @@ a:hover { color: var(--warm-coral); border-bottom-color: var(--warm-coral); }
   inset: 0;
   background-image:
     radial-gradient(3px 3px at 15% 25%, rgba(230, 168, 23, 0.35), transparent 60%),
-    radial-gradient(2px 2px at 78% 45%, rgba(232, 90, 79, 0.30), transparent 60%),
+    radial-gradient(2px 2px at 78% 45%, rgba(142, 58, 32, 0.30), transparent 60%),
     radial-gradient(3px 3px at 42% 80%, rgba(255, 171, 115, 0.30), transparent 60%);
   pointer-events: none;
 }
@@ -1597,7 +1597,7 @@ a:hover { color: var(--warm-coral); border-bottom-color: var(--warm-coral); }
 .award-card:hover {
   transform: translateY(-6px);
   border-color: var(--warm-sun);
-  box-shadow: 0 20px 45px rgba(1, 74, 124, 0.18);
+  box-shadow: 0 20px 45px rgba(142, 58, 32, 0.18);
 }
 
 /* Medallion: outer gold ring with subtle bevel, inner gradient disk, navy icon */
@@ -1658,7 +1658,7 @@ a:hover { color: var(--warm-coral); border-bottom-color: var(--warm-coral); }
   background:
     linear-gradient(180deg, var(--warm-coral) 0%, var(--deep-coral) 100%);
   clip-path: polygon(0 0, 100% 0, 92% 65%, 50% 50%, 8% 65%);
-  box-shadow: 0 4px 10px rgba(232, 90, 79, 0.35);
+  box-shadow: 0 4px 10px rgba(142, 58, 32, 0.35);
   z-index: 1;
   border-radius: 2px 2px 0 0;
 }
@@ -1795,7 +1795,7 @@ a:hover { color: var(--warm-coral); border-bottom-color: var(--warm-coral); }
   display: inline-flex;
   align-items: center;
   gap: 0.7rem;
-  box-shadow: 0 14px 35px rgba(44, 125, 160, 0.45), inset 0 1px 0 rgba(255,255,255,0.3);
+  box-shadow: 0 14px 35px rgba(184, 85, 63, 0.45), inset 0 1px 0 rgba(255,255,255,0.3);
   border: none;
   transition: all 240ms ease;
   opacity: 0;
@@ -1811,7 +1811,7 @@ a:hover { color: var(--warm-coral); border-bottom-color: var(--warm-coral); }
 
 .sticky-cta:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 50px rgba(44, 125, 160, 0.6), inset 0 1px 0 rgba(255,255,255,0.35);
+  box-shadow: 0 20px 50px rgba(184, 85, 63, 0.6), inset 0 1px 0 rgba(255,255,255,0.35);
   color: #fff;
   border-bottom: none;
 }
@@ -1842,7 +1842,7 @@ body.js-reveal .reveal.is-visible { opacity: 1; transform: translateY(0); }
 
 .site-footer {
   margin-top: 5rem;
-  background: linear-gradient(180deg, var(--deep-navy) 0%, #0F2D4A 100%);
+  background: linear-gradient(180deg, #3D2C20 0%, #2B1F18 100%);
   color: var(--surface-white);
   position: relative;
   overflow: hidden;
@@ -1853,7 +1853,7 @@ body.js-reveal .reveal.is-visible { opacity: 1; transform: translateY(0); }
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(3px 3px at 15% 35%, rgba(44, 125, 160, 0.3), transparent 60%),
+    radial-gradient(3px 3px at 15% 35%, rgba(184, 85, 63, 0.3), transparent 60%),
     radial-gradient(2px 2px at 80% 60%, rgba(255, 209, 102, 0.3), transparent 60%);
   pointer-events: none;
 }
@@ -2122,7 +2122,7 @@ body.js-reveal .reveal.is-visible { opacity: 1; transform: translateY(0); }
   font-size: 1.15rem;
   color: #fff;
   letter-spacing: 0.02em;
-  box-shadow: 0 8px 20px rgba(44, 125, 160, 0.28);
+  box-shadow: 0 8px 20px rgba(184, 85, 63, 0.28);
   flex-shrink: 0;
 }
 
@@ -2251,7 +2251,7 @@ body.js-reveal .reveal.is-visible { opacity: 1; transform: translateY(0); }
 }
 
 .timeline-node[data-kind="reminder"]  .timeline-dot { border-color: var(--warm-mint); box-shadow: 0 4px 12px rgba(127, 216, 190, 0.3); }
-.timeline-node[data-kind="deadline"]  .timeline-dot { border-color: var(--warm-coral); background: var(--warm-coral); box-shadow: 0 6px 18px rgba(44, 125, 160, 0.45); }
+.timeline-node[data-kind="deadline"]  .timeline-dot { border-color: var(--warm-coral); background: var(--warm-coral); box-shadow: 0 6px 18px rgba(184, 85, 63, 0.45); }
 .timeline-node[data-kind="confirm"]   .timeline-dot { border-color: var(--warm-sun); }
 .timeline-node[data-kind="finalize"]  .timeline-dot { border-color: var(--deep-gold); }
 .timeline-node[data-kind="event"]     .timeline-dot {
@@ -2259,13 +2259,13 @@ body.js-reveal .reveal.is-visible { opacity: 1; transform: translateY(0); }
   border-width: 5px;
   border-color: var(--deep-coral);
   background: linear-gradient(135deg, var(--warm-sun) 0%, var(--warm-coral) 100%);
-  box-shadow: 0 8px 24px rgba(232, 90, 79, 0.5);
+  box-shadow: 0 8px 24px rgba(142, 58, 32, 0.5);
   animation: pulse-dot 2.6s ease-in-out infinite;
 }
 
 @keyframes pulse-dot {
-  0%, 100% { box-shadow: 0 8px 24px rgba(232, 90, 79, 0.5); }
-  50%      { box-shadow: 0 8px 28px rgba(232, 90, 79, 0.8), 0 0 0 8px rgba(232, 90, 79, 0.10); }
+  0%, 100% { box-shadow: 0 8px 24px rgba(142, 58, 32, 0.5); }
+  50%      { box-shadow: 0 8px 28px rgba(142, 58, 32, 0.8), 0 0 0 8px rgba(142, 58, 32, 0.10); }
 }
 
 .timeline-label-block {
