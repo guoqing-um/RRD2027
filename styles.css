@@ -7,8 +7,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700;8..60,800&family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  --coral:          #FF7F7F;
-  --coral-light:    #FFF0F0;
+  --coral:          #F47321;
+  --coral-light:    #FDEEE3;
   --sky:            #87CEEB;
   --sky-light:      #E8F4FC;
   --sun:            #FFD93D;
@@ -39,18 +39,18 @@
 
   --deep-navy:      #0A2A47;
   --deep-teal:      #145E6B;
-  --deep-coral:     #C0473A;
+  --deep-coral:     #B0541C;
   --deep-gold:      #B5860F;
   --deep-purple:    #6C4A86;
   --deep-green:     #1F8A53;
 
   /* Serious structural anchors (used for header, primary buttons, accents) */
-  --brand:          #2E6DA4;
-  --brand-2:        #1F6B79;
-  --brand-grad:     linear-gradient(135deg, #2E6DA4 0%, #3E86C4 100%);
+  --brand:          #006747;
+  --brand-2:        #0E8A5F;
+  --brand-grad:     linear-gradient(135deg, #006747 0%, #0E8A5F 100%);
 
-  --bg:             #F6F8FA;
-  --bg-warm:        #EEF2F6;
+  --bg:             #FAF8F4;
+  --bg-warm:        #F2EDE4;
   --surface-white:  #FFFFFF;
   --ink:            #2D3436;
   --ink-soft:       #5C6670;
